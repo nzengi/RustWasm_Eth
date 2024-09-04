@@ -9,6 +9,9 @@ rustwasm_eth_core = { path = "../../core" }
 rustwasm_eth_backend = { path = "../../backend" }
 rustwasm_eth_sandbox = { path = "../../sandbox" }
 
+[dev-dependencies]
+criterion = "0.3"
+
 [[bin]]
 name = "simple_dapp"
 path = "src/main.rs"

@@ -14,3 +14,6 @@ path = "src/lib.rs"
 [dependencies]
 rustwasm_eth_core = { path = "../core" }
 log = { workspace = true }
+
+[dev-dependencies]
+criterion = "0.3"
