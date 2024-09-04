@@ -1,0 +1,14 @@
+[package]
+name = "simple_dapp"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+rustwasm_eth_core = { path = "../../core" }
+rustwasm_eth_backend = { path = "../../backend" }
+rustwasm_eth_sandbox = { path = "../../sandbox" }
+
+[[bin]]
+name = "simple_dapp"
+path = "src/main.rs"

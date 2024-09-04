@@ -1,0 +1,17 @@
+[package]
+name = "rustwasm_eth_sandbox"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[lib]
+name = "rustwasm_eth_sandbox"
+path = "src/lib.rs"
+
+[dependencies]
+rustwasm_eth_core = { path = "../core" }
+rustwasm_eth_backend = { path = "../backend" }
+log = { workspace = true }

@@ -1,0 +1,1 @@
+/Users/zengi/Desktop/rustwasm_eth/target/debug/librustwasm_eth_core.rlib: /Users/zengi/Desktop/rustwasm_eth/core/src/env.rs /Users/zengi/Desktop/rustwasm_eth/core/src/error.rs /Users/zengi/Desktop/rustwasm_eth/core/src/lib.rs /Users/zengi/Desktop/rustwasm_eth/core/src/memory.rs /Users/zengi/Desktop/rustwasm_eth/core/src/state.rs
