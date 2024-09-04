@@ -1,0 +1,41 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# C extensions
+*.o
+*.rlib
+*.a
+
+# Rust specific files
+/target/
+/Cargo.lock
+**/*.rs.bk
+
+# Ignoring backups, swap files and temp files
+*~
+*.swp
+*.swo
+*.bak
+
+# Ignore environment variables
+.env
+
+# Ignore output files like logs, temp or cache files
+*.log
+*.tmp
+*.cache
+
+# Ignore compiled WebAssembly files
+*.wasm
+
+# Node.js files (if applicable)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# MacOS specific
+.DS_Store

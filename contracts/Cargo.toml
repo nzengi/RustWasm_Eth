@@ -1,0 +1,27 @@
+[package]
+name = "rustwasm_eth_contracts"
+version = "0.1.0"
+edition = "2021"
+description = "Smart contract integration module for RustWasm Eth project"
+license = "MIT"
+
+[dependencies]
+# Ethers library is used for interacting with Ethereum smart contracts and blockchain.
+ethers = "2.0"  # ethers-rs integration for smart contract interactions
+
+# Tokio is required for async operations, especially for non-blocking Ethereum RPC calls.
+tokio = { version = "1", features = ["full"] }  # Async support via Tokio
+
+# Serde is used for serialization and deserialization, which is essential for JSON parsing.
+serde = { version = "1.0", features = ["derive"] }
+
+# Serde_json allows working with JSON objects in Rust, necessary for ABI processing.
+serde_json = "1.0"
+
+# Dotenv is used to manage environment variables such as private keys and RPC URLs from a .env file.
+dotenv = "0.15"  # Manage environment variables from .env files
+
+# Opt-in feature for additional runtime optimizations, useful for production deployments.
+[features]
+default = []
+optimize = []

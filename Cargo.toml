@@ -1,4 +1,7 @@
+# Workspace configuration for the RustWasm Eth project
+
 [workspace]
+# List all members of the workspace.
 members = [
     "core",
     "backend",
@@ -6,17 +9,39 @@ members = [
     "examples/simple_dapp"
 ]
 
+# General package metadata for the workspace
 [workspace.package]
+# Set the Rust edition to 2021 for modern language features
 edition = "2021"
+
+# Set the version for all packages in the workspace
 version = "0.1.0"
+
+# Define the authorship information
 authors = ["nzengi <zenginureddin1@gmail.com>"]
+
+# License information
 license = "MIT"
+
+# Homepage for the project (adjust as necessary)
 homepage = "https://example.com"
+
+# Repository link for version control and collaboration
 repository = "https://github.com/your-repo/rustwasm_eth"
 
+# Define common dependencies for the entire workspace
 [workspace.dependencies]
+# Serde for serialization/deserialization with derive macro for ease of use
 serde = { version = "1.0", features = ["derive"] }
+
+# JSON support using Serde
 serde_json = "1.0"
+
+# Logging crate for structured logging
 log = "0.4"
+
+# Error handling made simpler with the `thiserror` crate
 thiserror = "1.0"
+
+# Criterion for benchmarking and performance evaluation
 criterion = "0.3"

@@ -5,12 +5,13 @@ authors.workspace = true
 edition.workspace = true
 
 [dependencies]
-rustwasm_eth_core = { path = "../../core" }
-rustwasm_eth_backend = { path = "../../backend" }
-rustwasm_eth_sandbox = { path = "../../sandbox" }
-
-[dev-dependencies]
-criterion = "0.3"
+rustwasm_eth_core = { path = "../../core" }   # Core logic and shared utilities
+rustwasm_eth_backend = { path = "../../backend" }   # Backend for executing WASM and other features
+rustwasm_eth_sandbox = { path = "../../sandbox" }   # Sandbox environment for testing and isolation
+rustwasm_eth_contracts = { path = "../../contracts" }   # Contracts module for handling smart contract interactions
+ethers = "0.6"  # ethers-rs library for Ethereum blockchain integration
+tokio = { version = "1", features = ["full"] }   # Tokio runtime for async operations
+dotenv = "0.15"   # dotenv for loading environment variables from .env file
 
 [[bin]]
 name = "simple_dapp"

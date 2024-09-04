@@ -12,9 +12,9 @@ name = "rustwasm_eth_core"
 path = "src/lib.rs"
 
 [dependencies]
-serde = { workspace = true }
-serde_json = { workspace = true }
-thiserror = { workspace = true }
+serde = { workspace = true }          # Serialization and deserialization support for JSON and other formats
+serde_json = { workspace = true }     # JSON support for Rust
+thiserror = { workspace = true }      # A library for ergonomic error handling in Rust
 
 [dev-dependencies]
-criterion = "0.3"
+criterion = "0.3"                     # Criterion for benchmarking code, useful during development and testing

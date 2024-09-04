@@ -12,8 +12,18 @@ name = "rustwasm_eth_backend"
 path = "src/lib.rs"
 
 [dependencies]
+# Core library dependency, ensuring proper integration with the core module.
 rustwasm_eth_core = { path = "../core" }
+
+# Logging library to handle internal logging for debugging and tracing purposes.
 log = { workspace = true }
 
+# Test and benchmark dependencies
 [dev-dependencies]
+# Criterion is used for benchmarking the performance of various components.
 criterion = "0.3"
+
+# Opt-in feature for enabling additional performance optimizations.
+[features]
+default = []
+optimize = []

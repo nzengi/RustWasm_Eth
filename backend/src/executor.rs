@@ -1,30 +1,45 @@
+/// Struct to manage execution of WASM code with specified memory size.
 pub struct Executor {
-    memory_size: usize,
+    memory_size: usize, // Size of the allocated memory for WASM execution
 }
 
 impl Executor {
-    // Yeni bir Executor oluştur
+    /// Creates a new `Executor` with the specified memory size.
+    ///
+    /// # Arguments
+    /// * `memory_size` - Size of the memory to be allocated for the execution.
     pub fn new(memory_size: usize) -> Self {
+        // Return an instance of `Executor` with the provided memory size
         Executor { memory_size }
     }
 
-    // WASM kodunu yürüt
+    /// Executes WASM code by simulating the memory allocation and execution process.
+    ///
+    /// # Arguments
+    /// * `wasm_code` - Byte slice of the WASM code to be executed.
+    ///
+    /// # Returns
+    /// * `Result<(), String>` - Returns `Ok(())` if the execution succeeds, or an error message if it fails.
     pub fn execute(&mut self, wasm_code: &[u8]) -> Result<(), String> {
-        // Bellek tahsisi yap
-        let mut memory = vec![0u8; self.memory_size];
-
-        // WASM kodunu bellek üzerinde yürütme işlemini simüle edin
+        // Ensure the provided WASM code is within the memory limit
         if wasm_code.len() > self.memory_size {
-            return Err("WASM code is too large for the allocated memory".into());
+            return Err(format!(
+                "WASM code exceeds memory limit of {} bytes (code size: {} bytes)",
+                self.memory_size,
+                wasm_code.len()
+            ));
         }
 
-        // Belleğe WASM kodunu kopyalayın
+        // Allocate memory for the execution, using Vec for dynamic memory allocation
+        let mut memory = vec![0u8; self.memory_size];
+
+        // Copy the WASM code into the allocated memory
         memory[..wasm_code.len()].copy_from_slice(wasm_code);
 
-        // Burada gerçek WASM yürütme işlemi yapılacak
+        // Simulate WASM execution (actual implementation will involve a WASM runtime)
         println!("Executing WASM code...");
 
-        // Yürütme başarılı olursa
+        // Return success if execution completes
         Ok(())
     }
 }
